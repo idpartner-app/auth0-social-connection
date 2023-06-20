@@ -1,8 +1,8 @@
 {
   "options": {
-    "icon_url": "https://identicons.dev/static/icons/mono/png/icon-integrations-marketplace.png"
+    "icon_url": "https://assets.idpartner.com/logo.png"
   },
   "strategy": "oauth2",
-  "name": "social-connection-integration-test",
-  "display_name": "Integration Test"
+  "name": "IDPartner",
+  "display_name": "IDPartner"
 }
