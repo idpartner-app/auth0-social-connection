@@ -2,17 +2,21 @@
 module.exports = function fetchUserProfile(accessToken, context, callback) {
   request.get(
     {
-      url: 'https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me',
+      url: "https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me",
       headers: {
-        'Authorization': 'Bearer ' + accessToken,
-      }
+        Authorization: `Bearer ${accessToken}`,
+      },
     },
     (err, resp, body) => {
       if (err) {
         return callback(err);
       }
       if (resp.statusCode !== 200) {
-        return callback(new Error(`Failed status code check for user profile response. Received ${resp.statusCode}.`));
+        return callback(
+          new Error(
+            `Failed status code check for user profile response. Received ${resp.statusCode}.`
+          )
+        );
       }
       let bodyParsed;
       try {
@@ -22,9 +26,9 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
       }
       const profile = {
         user_id: bodyParsed.email,
-        ...bodyParsed
+        ...bodyParsed,
       };
-      callback(null, profile);
+      return callback(null, profile);
     }
   );
 };

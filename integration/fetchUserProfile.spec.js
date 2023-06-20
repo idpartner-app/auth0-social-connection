@@ -18,7 +18,9 @@ describe("fetchUserProfile", () => {
     });
 
     it("should get the correct endpoint", () => {
-      expect(global.request.get.mock.calls[0][0].url).toEqual("https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me");
+      expect(global.request.get.mock.calls[0][0].url).toEqual(
+        "https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me"
+      );
     });
 
     it("should use the passed-in access token", () => {
@@ -52,7 +54,9 @@ describe("fetchUserProfile", () => {
       };
       fetchUserProfile(1, defaultContext, profileCallback);
 
-      expect(profileCallback).toBeCalledWith(new Error("Failed status code check for user profile response. Received 401."));
+      expect(profileCallback).toBeCalledWith(
+        new Error("Failed status code check for user profile response. Received 401.")
+      );
     });
 
     it("should handle invalid JSON responses", () => {
@@ -64,7 +68,9 @@ describe("fetchUserProfile", () => {
       fetchUserProfile(1, defaultContext, profileCallback);
 
       expect(profileCallback.mock.calls).toHaveLength(1);
-      expect(profileCallback.mock.calls[0][0]).toEqual(new Error("Failed JSON parsing for user profile response."));
+      expect(profileCallback.mock.calls[0][0]).toEqual(
+        new Error("Failed JSON parsing for user profile response.")
+      );
     });
 
     it("should call the callback with the profile if response is ok", () => {

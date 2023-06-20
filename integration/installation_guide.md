@@ -1,4 +1,5 @@
 IDPartner offers the fast-lane to engage and convert verified users.
+
 ## Prerequisites
 
 1. An Auth0 account and tenant. [Sign up for free](https://auth0.com/signup).
@@ -6,7 +7,8 @@ IDPartner offers the fast-lane to engage and convert verified users.
 1. Create a regular web application. [Learn more](https://auth0.com/docs/get-started/auth0-overview/create-applications)
 1. Verify your email by "clicking verify account" in your inbox
 1. Sign in and register an OTP. [Sign in here](https://console.idpartner.com/#/login)
-## Set up [[TODO: Your service name]]
+
+## Set up IDPartner
 
 1. IdPArtner sign in. [Sign in here](https://console.idpartner.com/#/login)
 1. Click on "Applications" on the left panel
@@ -19,7 +21,6 @@ IDPartner offers the fast-lane to engage and convert verified users.
 1. Click the "Next step" button
 1. Click the "Create application" button
 1. Grab the client_id and the client_secret form the record with "Auth0 social connection" name
-
 
 ## Add the Connection
 
