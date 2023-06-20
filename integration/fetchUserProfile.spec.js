@@ -18,7 +18,7 @@ describe("fetchUserProfile", () => {
     });
 
     it("should get the correct endpoint", () => {
-      expect(global.request.get.mock.calls[0][0].url).toEqual("USERINFO_URL");
+      expect(global.request.get.mock.calls[0][0].url).toEqual("https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me");
     });
 
     it("should use the passed-in access token", () => {
@@ -69,7 +69,7 @@ describe("fetchUserProfile", () => {
 
     it("should call the callback with the profile if response is ok", () => {
       const responseBody = {
-        sub: "__test_sub__",
+        email: "test@idpartner.com",
       };
 
       global.request = {
@@ -83,7 +83,8 @@ describe("fetchUserProfile", () => {
       expect(profileCallback.mock.calls).toHaveLength(1);
       expect(profileCallback.mock.calls[0][0]).toBeNull();
       expect(profileCallback.mock.calls[0][1]).toEqual({
-        user_id: "__test_sub__",
+        user_id: "test@idpartner.com",
+        email: "test@idpartner.com",
       });
     });
   });

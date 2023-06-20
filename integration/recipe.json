@@ -1,10 +1,22 @@
 {
-  "authorizationURL": "https://example.com/oauth/authorize",
-  "tokenURL": "https://example.com/oauth/token",
+  "authorizationURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/auth",
+  "tokenURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/token",
   "permissions": [
     {
-      "scope": "example",
-      "label": "Example Permission",
+      "scope": "openid",
+      "label": "Protocol OpenID Connect",
+      "required": true,
+      "default": true
+    },
+    {
+      "scope": "email",
+      "label": "Email",
+      "required": false,
+      "default": true
+    },
+    {
+      "scope": "profile",
+      "label": "Full name",
       "required": false,
       "default": true
     }
