@@ -23,7 +23,7 @@ This file defines the template for the connection settings in Auth0. The followi
     * `required` - boolean to indicate whether this permission is always sent
     * `default` - boolean to indicate whether this checkbox should be checked by default (should be `true` if required)
 * `configuration` - this must contain an array of form field objects that the tenant can use to configure their connection. This array must include a field with a name of `client_id` and `client_secret` to contain the credentials used for exchanging an authorization code. Use the following properties to describe the fields:
-    * `name` - form field name used in the connection options object. If your authorization and/or token URL(s) are dynamic, this should match the value contained within the brackets. 
+    * `name` - form field name used in the connection options object. If your authorization and/or token URL(s) are dynamic, this should match the value contained within the brackets.
     * `label` - the human-readable label for this field shown to tenant admins
     * `description` - description text shown beneath the field
     * `required` - whether the field is required or not
@@ -32,7 +32,7 @@ This file defines the template for the connection settings in Auth0. The followi
 
 This is the JavaScript that will run once an access token is returned. There are 2 `TODO` items here:
 
-* Add the userinfo URL that should be called with the returned access token. Make sure that the authorization used against this endpoint is correct. 
+* Add the userinfo URL that should be called with the returned access token. Make sure that the authorization used against this endpoint is correct.
 * Add the logic to map the returned identity to the [Auth0 user profile](https://auth0.com/docs/manage-users/user-accounts/user-profiles/user-profile-structure#user-profile-attributes).
 
 ### `integration.action.spec.js`
@@ -47,12 +47,12 @@ This file contains the Markdown-formatted instructions that tenant admins will u
 
 We've included a few helpful scripts in a `Makefile` that should help you build, test, and submit a quality integration. You can develop your Action locally and use the commands below to lint, test, and deploy to a tenant.
 
-The commands below require Docker to be installed and running on your local machine (though no direct Docker experience is necessary). Download and install Docker [using these steps for your operating system](https://docs.docker.com/get-docker/). 
+The commands below require Docker to be installed and running on your local machine (though no direct Docker experience is necessary). Download and install Docker [using these steps for your operating system](https://docs.docker.com/get-docker/).
 
 * `make test` - this will run the Jest spec file explained above, along with a few other integrity checks.
 * `make lint` - this will check and format your JS code according to our recommendations.
 * `make deploy_init` - use this command to initialize deployments to a test tenant. You will need to [create a machine-to-machine application](https://auth0.com/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps) authorized for the Management API with permissions `read:connections`, `update:connections`, `delete:connections`, and `create:connections`.
-* `make deploy_get_token` - use this command after `deploy_init` to generate an access token
+* `make deploy_get_token` - use this command after `make deploy_init` to generate an access token
 * `make deploy_create` - use this command to create a new connection based on the current integration files. If this successfully completes, you will see a URL in your terminal that will allow you to enable applications and try the connection.
 * `make deploy_update` - use this command to update the created connection based on the current integration files.
 * `make deploy_delete` - use this command to destoy the connection.
