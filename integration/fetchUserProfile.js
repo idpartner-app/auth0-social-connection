@@ -31,4 +31,4 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
       return callback(null, profile);
     }
   );
-}
+};
