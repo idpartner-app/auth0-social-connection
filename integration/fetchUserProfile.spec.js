@@ -19,7 +19,7 @@ describe("fetchUserProfile", () => {
 
     it("should get the correct endpoint", () => {
       expect(global.request.get.mock.calls[0][0].url).toEqual(
-        "https://auth-api.idpartner-dev.com/oidc-proxy/proxy/me"
+        "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/me"
       );
     });
 

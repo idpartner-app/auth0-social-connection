@@ -1,6 +1,6 @@
 {
-  "authorizationURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/auth",
-  "tokenURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/token",
+  "authorizationURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/auth",
+  "tokenURL": "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/token",
   "permissions": [
     {
       "scope": "openid",

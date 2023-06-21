@@ -16,8 +16,8 @@ IDPartner offers the fast-lane to engage and convert verified users.
 1. Select "client_secret_basic" as the "Auth method"
 1. Add "Auth0 social connection" as the "Application name"
 1. Add a valid URL for the logo of your applciation in the "Application logo"
-1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth" as the "Origin URL"
-1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/callback" as the "Redirect URL"
+1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/auth" as the "Origin URL"
+1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/callback" as the "Redirect URL"
 1. Click the "Next step" button
 1. Click the "Create application" button
 1. Grab the client_id and the client_secret form the record with "Auth0 social connection" name
@@ -28,8 +28,8 @@ IDPartner offers the fast-lane to engage and convert verified users.
 1. Read the necessary access requirements, and select **Continue**.
 1. Configure the integration using the following fields:
    1. Set a name
-   1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth" as the "Authorization URL"
-   1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/token" as the "Token URL"
+   1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/auth" as the "Authorization URL"
+   1. Add "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/token" as the "Token URL"
    1. Add "openid email profile" as the "Scope"
    1. Turn on the toggle button for "Separate scopes using a space"
    1. Add the copied client_id as the "Client ID"

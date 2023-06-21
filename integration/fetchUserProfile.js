@@ -2,7 +2,7 @@
 module.exports = function fetchUserProfile(accessToken, context, callback) {
   request.get(
     {
-      url: "https://auth-api.idpartner.com/oidc-proxy/proxy/me",
+      url: "https://auth-api.idpartner.com/oidc-proxy/proxy/auth0/me",
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
@@ -31,4 +31,4 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
       return callback(null, profile);
     }
   );
-}
+};
