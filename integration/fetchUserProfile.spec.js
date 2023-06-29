@@ -38,7 +38,7 @@ describe("fetchUserProfile", () => {
     const profileCallback = jest.fn();
 
     it("should call the callback with an error", () => {
-      const requestError = new Error("__test_error__");
+      const requestError = new Error("Failed to fetch user profile");
       global.request = { get: jest.fn((opts, cb) => cb(requestError)) };
       fetchUserProfile(1, defaultContext, profileCallback);
 

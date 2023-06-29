@@ -9,7 +9,7 @@ module.exports = function fetchUserProfile(accessToken, context, callback) {
     },
     (err, resp, body) => {
       if (err) {
-        return callback(err);
+        return callback(new Error("Failed to fetch user profile"));
       }
       if (resp.statusCode !== 200) {
         return callback(
